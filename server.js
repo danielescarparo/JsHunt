@@ -1,6 +1,11 @@
 const express = require('express')
+const mongoose = require('mongoose')
 
+//init app
 const app = express();
+
+//init database
+mongoose.connect('mongodb://localhost:27017/nodeapi',  { useNewUrlParser: true, useUnifiedTopology: true });
 
 // req -> request
 // res -> response
